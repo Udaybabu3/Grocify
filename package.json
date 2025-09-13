@@ -1,0 +1,32 @@
+{
+  "name": "grocify-fullstack",
+  "version": "1.0.0",
+  "description": "Grocify - Full Stack Grocery Management Application",
+  "main": "start-fullstack.js",
+  "scripts": {
+    "start": "node start-fullstack.js",
+    "dev": "node start-fullstack.js",
+    "backend": "cd backend && node index.js",
+    "frontend": "cd frontend && npm start",
+    "install-all": "npm install && cd backend && npm install && cd ../frontend && npm install",
+    "build": "cd frontend && npm run build"
+  },
+  "keywords": [
+    "grocery",
+    "management",
+    "fullstack",
+    "react",
+    "nodejs",
+    "express",
+    "postgresql"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  },
+  "dependencies": {
+    "resend": "^6.0.3"
+  }
+}
