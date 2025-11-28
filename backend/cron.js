@@ -4,7 +4,7 @@ const pool = require('./db'); // PostgreSQL connection
 const sendEmail = require('./utils/sendEmail'); // SendGrid email function
 
 // Cron job: runs daily at 8:00 AM
-cron.schedule('* * * * *', async () => {
+cron.schedule('0 8 * * *', async () => {
   console.log('🔔 Running daily expiry check...');
 
   try {

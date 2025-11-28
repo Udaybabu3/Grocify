@@ -19,8 +19,13 @@ app.use(helmet()); // adds security headers
 const authRoutes = require('./routes/auth');
 const itemRoutes = require('./routes/items');
 
+// Existing route mounts
 app.use('/auth', authRoutes);
 app.use('/items', itemRoutes);
+
+// 🆕 NEW — Mount Recipe Suggestion Route
+// This connects the ML + Node.js integration
+app.use('/api/recipes', require('./routes/recipes_from_cart'));
 
 // Health check / root route
 app.get('/', (req, res) => {
